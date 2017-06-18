@@ -1,4 +1,3 @@
-
  <!DOCTYPE HTML>
 <html >
 <head>
@@ -71,66 +70,76 @@
   <body>
     <header>
       <div>
-		
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Zhouximin (周希敏)">Zhouximin (周希敏)</a></h1>
-				<a class="blog-motto">To improve is to change, to perfect is to change often.</a>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/Aboutme/">About</a></li>
-					
-					<li>
-					
+    
+      <div id="textlogo">
+        <h1 class="site-name"><a href="/" title="Zhouximin (周希敏)">Zhouximin (周希敏)</a></h1>
+        <a class="blog-motto">To improve is to change, to perfect is to change often.</a>
+      </div>
+      <div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+      </a></div>
+      <nav class="animated">
+        <ul>
+          <ul>
+           
+            <li><a href="/Aboutme/">About</a></li>
+          
+          <li>
+          
        <form class="search" action=http://null-zxm.github.io target="_blank">
           <label>Search</label>
          <input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="搜索"><br>
-					
-					</li>
-				</ul>
-                            </nav>			
+          
+          </li>
+        </ul>
+                            </nav>      
 </div>
 
     </header>
     <div id="container">
       <div id="main">
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2017/06/18/" title="Caffe学习笔记1-安装以及代码结构" itemprop="url">
-  
-      <time datetime="2017-06-18-02:52" itemprop="datePublished">2017-06-18</time>
-    <h1 itemprop="name">第一篇博客</h1>
+        <h1>Avl-Tree的实现 以及自己的理解</h1>
+    Avl-tree 是一种平衡树 什么是平衡树？<数据结构与算法>上面是这样说的<br／>
+    简单的第一种想法就是 树的深度必须是O（log N）也就是每一个节点 他的左右子树 具有相同的高度 <br／>
+    空子树的高度为-1，然而如果这样定义 深度是最小了 但是太严格 难以使用 所以放宽条件 使得可以相差1<br／>
+    所以当我们 添加数据的时候 如何保证树的平衡呢？
+    <h3>单旋转</h3>
+    一棵树的2个子树 若不平衡 必然 是 左子树的高度-右子树的高度>1 或者是 右子树的高度-左子树的高>1<br／>
+    第一种情况姑且叫做 左旋转 如何旋转？ 看下图
+    <span style="width: 20%;height: 40px;" >
     
-     
-           <p itemprop="description" >
-             一些想法
-           </p>
-        
+    <img  src="img/259c8fe98841743b991faa344b0115b6.jpg"/>
+    </span>
+    <br/><br/>
+    图中可以看出 k2节点的左子树深度-右子树深度>1 所以进行了旋转 如图这样子旋转 使得k1上升一层 k2 下降一层<br/>
+    重新排列成一颗等价的树
+    <h4>代码实现</h4>
+    span style="width: 20%;height: 40px;" >
     
-  </a>
-</section>
- <section class="post" itemscope itemprop="blogPost">
+    <img  src="img/屏幕快照 2017-06-18 下午6.31.31.png"/>
+    </span>
   
-    <a href="/2017/06/19/" title="数据结构" itemprop="url">
   
-      <time datetime="2017-06-19-06:35" itemprop="datePublished">2017-06-18</time>
-    <h1 itemprop="name">数据结构之 AVL-Tree</h1>
-    
-     
-           <p itemprop="description" >
-             平衡树 
-           </p>
-        
-    
-  </a>
-</section>
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -143,27 +152,27 @@
 <div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 <div id="authorInfo">
-	
-	<div class="social-list" class="clearfix">
-	</div>
+  
+  <div class="social-list" class="clearfix">
+  </div>
 </div>
 
   
 <div class="categorieslist">
-	<p class="asidetitle">分類</p>
-		<ul>
-		
-			<li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
-		
-			<li><a href="/categories/Code/" title="Code">Code<sup>1</sup></a></li>
-		
-			<li><a href="/categories/LearningCaffe/" title="LearningCaffe">LearningCaffe<sup>6</sup></a></li>
-		
-			<li><a href="/categories/Note/" title="Note">Note<sup>3</sup></a></li>
-		
-			<li><a href="/categories/Paper/" title="Paper">Paper<sup>2</sup></a></li>
-		
-		</ul>
+  <p class="asidetitle">分類</p>
+    <ul>
+    
+      <li><a href="/categories/Book/" title="Book">Book<sup>3</sup></a></li>
+    
+      <li><a href="/categories/Code/" title="Code">Code<sup>1</sup></a></li>
+    
+      <li><a href="/categories/LearningCaffe/" title="LearningCaffe">LearningCaffe<sup>6</sup></a></li>
+    
+      <li><a href="/categories/Note/" title="Note">Note<sup>3</sup></a></li>
+    
+      <li><a href="/categories/Paper/" title="Paper">Paper<sup>2</sup></a></li>
+    
+    </ul>
 </div>
 
 </aside>
