@@ -134,13 +134,39 @@ insert（）的工作就是入队 等价于 enqueue（）
                                     <a href="/java/2017/07/07" class="f-more f-primary-b">Read more</a>
                                 </div>
                             </div> -->
-                                   <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
+             <!--                       <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
                                 <a href="#" class="f-infoblock-with-icon__info_title b-infoblock-with-icon__info_title f-primary-l b-title-b-hr f-title-b-hr">
                                 啥都没有
                                 </a>
                                 <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text c-primary b-blog-listing__text">
                          
+ </div> -->
+    <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
+                                <a href="#" class="f-infoblock-with-icon__info_title b-infoblock-with-icon__info_title f-primary-l b-title-b-hr f-title-b-hr">
+                             JAVA内存模型(2)
+                                </a>
+                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text c-primary b-blog-listing__text">
+                             主内存与工作内存
+
+JAVA内存模型规定了所有的变量都储存在主内存中，每一条线程都有着自己的工作内存，里面保存着主内存的副本拷贝(不会把所有都拷贝，会拷贝引用，以及对象中某个线程访问到的字段等。。)，所以线程操作的都是自己工作内存中的变量，然后再更新到主内  
  </div>
+                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text">
+                                    <a href="/java/2017/07/29" class="f-more f-primary-b">Read more</a>
+                                </div>
+                            </div>
+                             <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
+                                <a href="#" class="f-infoblock-with-icon__info_title b-infoblock-with-icon__info_title f-primary-l b-title-b-hr f-title-b-hr">
+                               JAVA并发编程之 闭锁与栅栏
+                                </a>
+                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text c-primary b-blog-listing__text">
+                             了解概念
+
+闭锁：闭锁是一种同步工具类，可以延迟线程的进度直到其到达终点的状态(终点的状态的意思呢就是 需要满足什么条件 你才能继续跑：就像如果你要计算c=a+b 计算之前要先知道 a 和b 的值才能继续计算)
+ </div>
+                                <div class="f-infoblock-with-icon__info_text b-infoblock-with-icon__info_text">
+                                    <a href="/java/2017/07/08" class="f-more f-primary-b">Read more</a>
+                                </div>
+                            </div>
                 <!--               <div class="b-infoblock-with-icon__info f-infoblock-with-icon__info">
                                 <a href="#" class="f-infoblock-with-icon__info_title b-infoblock-with-icon__info_title f-primary-l b-title-b-hr f-title-b-hr">
                                 JVM内存模型
@@ -233,9 +259,9 @@ JAVA内存模型规定了所有的变量都储存在主内存中，每一条线�
     <ul>
         <li><a href="/java">First</a></li>
         <li><a class="prev" href="#"><i class="fa fa-angle-left"></i></a></li>
-        <li class="is-active-pagination"><a href="/java">1</a></li>
+        <li ><a href="/java">1</a></li>
         <li><a href="/java/page2">2</a></li>
-        <li><a href="/java/page3">3</a></li>
+        <li class="is-active-pagination"><a href="/java/page3">3</a></li>
         <li><a class="next" href="#"><i class="fa fa-angle-right"></i></a></li>
         <li><a href="/java/page3">Last</a></li>
     </ul>
