@@ -15,4 +15,4 @@ tags:
 
 ![pca2](/img/pca2.png)
 
-![pca3](/img/pca1.png)
+![pca3](/img/pca3.png)
