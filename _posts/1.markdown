@@ -15,4 +15,3 @@ tags:
 
 hello $a\_{hello}$
 
-hello $a_{hello}​$
