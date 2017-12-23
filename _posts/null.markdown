@@ -1,18 +1,17 @@
 ---
 layout:     post
-title:      "LDA and PCA"
+title:      "Welcome to Zhou Blog"
 subtitle:   " \"Hello World, Hello Blog\""
-date:       2017-12-23 12:00:00
+date:       2015-01-29 12:00:00
 author:     "Null"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - 机器学习
+    - 生活
 ---
 
 > “Yeah It's on. ”
 
-![pca1](/img/pca1.png)
+## 
 
-![pca2](/img/pca2.png)
 
-![pca3](/img/pca3.png)
+
