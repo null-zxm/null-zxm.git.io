@@ -20,6 +20,7 @@
     "watch": "grunt watch & npm run preview & jekyll serve -w;"
   },
   "dependencies": {
+    "hexo-asset-image": "0.0.3",
     "hexo-inject": "^1.0.0",
     "hexo-math": "^3.0.4"
   }
