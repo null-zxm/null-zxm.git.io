@@ -1,70 +1,109 @@
-# Resources settings
-source:      .
-layouts:     ./_layouts
-timezone:    Asia/Hongkong
+title:            Site Title
+description:      Site description for the metas.
+logo:             omikron.png
+disqus_shortname: shortname
+# Assign a default image for your site's header and footer
+default_bg:       default_bg.jpg
+search:           true
+share:            true
+# Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
+readtime:         true
+# Turn on or off the fin animations in the header and footer
+triangleheader:	  true
+animated_fins:    true
+# Specify the fin color in RGB value
+fin_color:        "255,255,255"
+# Change url to your domain. Leave localhost server or blank when working locally.
+url:          http://hmfaysal.me/hmfaysal-omega-theme
+# baseurl:           
 
-# Site settings
-email: 1540294142@qq.com
-author: Joytou Wu
-owner_name: Joytou Wu
-github_username: joytou
-repo: JOYTOU
+# Gems used
+gems:
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-seo-tag
 
-#Server
-url: http://joytou.nets.hk
-github: https://github.com/joytou/
-coding: https://coding.net/joytou/
-baseurl: ""
+# Archives configuration
+# https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    # year: '/:year/'
+    # month: '/:year/:month/'
+    # day: '/:year/:month/:day/'
+    tag: '/archive/tag/:name/'
+    category: '/archive/category/:name/'
 
-#Page settings
-future: true
-show_drafts: nil
-lsi: true
-published: false
-safe: false
-permalink: /:year/:month/:day/:title/
-markdown: kramdown
-excerpt_separator: '<!-- more -->'
+# Owner/author information
+author:
+  name:           Your Name
+  picture:        your-photo.jpg
+  email:          your@email.com
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:    Some Details about yourself
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  facebook:
+  github:
+  linkedin:
+  instagram:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    "http://plus.google.com/123123123123132123"
 
-exclude: ['README.md','Manifest.md']
-include: ['robots.txt']
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
 
-# Description
-description: "只为博客而生，也因为博客而存在。Not only for the existence of the blog, but also because of the existence of the blog."
-# Keywords
-keywords:
-        - "github"
-        - "bootstrap"
-        - "blog"
-        - "joytou"
-        - "markdown"
-        - "jekyll"
-        - "博客"
-        - "个人博客"
-        - "博客模板"
-        
-#Update configuration
-versioncode: 1
-        #The current versioncode.
-versionname: "1.0.1"
-        #The current versionname.
-#remind: true
-        #Whether to remind you to upgrade the latest version when there is the latest version.
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+    external: false
+    icon: home
+  - title: Categories
+    url: /categories
+  - title: Tags
+    url: /tags
 
-#Others
-#Baidu
-BaiduSiteVerification: "eb6Z6IT34b"
-#Sogou
-SogouSiteVerification: "xhqLIE4SUI"
-#360
-360SiteVerification: "24cc2fe4596dc5c6885b587f8db09733"
-#51La
-51la: "19258191"
-51lamb: "1"
+# Sitemap configuration
+# https://github.com/kinnetica/jekyll-plugins
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
 
-coding_comments:
-  owner: 'joytou'
-  repo: 'JOYTOU'
-  oauth:
-    client_id: '624713aab28c44e0555b0e8d5d18dece'
-    client_secret: '5d2d45460648bfbd3b9f77bead1a0ac6aa7c3c95'
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+markdown:    kramdown
+highlighter: rouge
+paginate:    6
+paginate_path: "/blog/:num/"
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title
+  pages:
+    output: true
+    permalink: /:title
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
