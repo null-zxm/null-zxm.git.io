@@ -11,8 +11,8 @@ tags:
 
 > “Yeah It's on. ”
 
-![pca1](/img/pca/pca1.png)
+![pca1](/img/pca1.png)
 
-![pca2](/img/pca/pca2.png)
+![pca2](/img/pca2.png)
 
-![pca3](/img/pca/pca3.png)
+![pca3](/img/pca3.png)
