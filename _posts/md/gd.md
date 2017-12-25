@@ -37,55 +37,55 @@
       目标函数$J(\theta )=\frac{1}{2}\sum_{i=1}^{m}(y^{(i)}-\theta ^{T}x^{(i)})^2=\frac{1}{2}(X\theta-y)^{T}(X\theta-y)$
 
 
-    * $\bigtriangledown_{\theta }J(\theta )=\bigtriangledown_{\theta }(\frac{1}{2}(X\theta-y)^{T}(X\theta- y))$
-    * $=\bigtriangledown_{\theta }(\frac{1}{2}(\theta ^{T}X^{T}-y^{T})(X\theta -y))$
-    * $=\bigtriangledown_{\theta }(\frac{1}{2}(\theta ^{T}X^{T}X\theta -\theta ^{T}X^{T}y-y^{T}X\theta +y^{T}y))$
-    * $=\frac{1}{2}(2X^{T}X\theta -X^{T}y-(y^{T}X)^{T})=X^{T}X\theta -X^{T}y=0$
-    * 可以得到 $\theta=(X^{T}X)^{-1}X^{T}y$
-    * 这个时候如果$X^{T}X$不可逆或者防止过拟合可以令 $\theta=(X^{T}X+\lambda I)^{-1}X^{T}y$
+* $\bigtriangledown_{\theta }J(\theta )=\bigtriangledown_{\theta }(\frac{1}{2}(X\theta-y)^{T}(X\theta- y))$
+* $=\bigtriangledown_{\theta }(\frac{1}{2}(\theta ^{T}X^{T}-y^{T})(X\theta -y))$
+* $=\bigtriangledown_{\theta }(\frac{1}{2}(\theta ^{T}X^{T}X\theta -\theta ^{T}X^{T}y-y^{T}X\theta +y^{T}y))$
+* $=\frac{1}{2}(2X^{T}X\theta -X^{T}y-(y^{T}X)^{T})=X^{T}X\theta -X^{T}y=0$
+* 可以得到 $\theta=(X^{T}X)^{-1}X^{T}y$
+* 这个时候如果$X^{T}X$不可逆或者防止过拟合可以令 $\theta=(X^{T}X+\lambda I)^{-1}X^{T}y$
 
-    ####梯度下降（重点)
+####梯度下降（重点)
 
-    * 初始化$\theta$（随机）
+* 初始化$\theta$（随机）
 
-    * 沿着负梯度方向迭代，
+* 沿着负梯度方向迭代，
 
-      $\theta =\theta - \alpha\cdot \frac{\partial J(\theta )}{\partial \theta } $
+  $\theta =\theta - \alpha\cdot \frac{\partial J(\theta )}{\partial \theta } $
 
-      可以得到$\frac{\partial J(\theta )}{\partial \theta_{j}}=(h_{\theta }(x)-y)x_{j}$
+  可以得到$\frac{\partial J(\theta )}{\partial \theta_{j}}=(h_{\theta }(x)-y)x_{j}$
 
-      所以批量梯度下降算法：
+  所以批量梯度下降算法：
 
-      Repeat until convergence{
+  Repeat until convergence{
 
-      ​	$\theta_{j} :=\theta_{j} + \alpha\sum(y^{(i)}-h_{\theta}(x^{(i)}))x_{j}^{(i)}$
+  ​	$\theta_{j} :=\theta_{j} + \alpha\sum(y^{(i)}-h_{\theta}(x^{(i)}))x_{j}^{(i)}$
 
-      }
+  }
 
-    * 随机梯度下降算法
+* 随机梯度下降算法
 
-      随机梯度算法呢就是先选取一个样本使$\theta$往前走一步，之后再用另外一个样本继续迭代，虽然并不是每一次都是靠近的，但是大体的趋势是向极值靠拢的。
+  随机梯度算法呢就是先选取一个样本使$\theta$往前走一步，之后再用另外一个样本继续迭代，虽然并不是每一次都是靠近的，但是大体的趋势是向极值靠拢的。
 
-      Loop{
+  Loop{
 
-      ​	for i = 1 to m,{	
+  ​	for i = 1 to m,{	
 
-      ​	$\theta_{j} :=\theta_{j} + \alpha(y^{(i)}-h_{\theta}(x^{(i)}))x_{j}^{(i)}$
+  ​	$\theta_{j} :=\theta_{j} + \alpha(y^{(i)}-h_{\theta}(x^{(i)}))x_{j}^{(i)}$
 
-      ​	}
+  ​	}
 
-      }
+  }
 
-    * mini-batch梯度下降
+* mini-batch梯度下降
 
-      取n个样本的平均梯度作为方向，这样距离极值点近而且速度不会太慢，
+  取n个样本的平均梯度作为方向，这样距离极值点近而且速度不会太慢，
 
-      Loop{
+  Loop{
 
-      ​	for t= 1 to m step=n,{	
+  ​	for t= 1 to m step=n,{	
 
-      ​	$\theta_{j} :=\theta_{j} +\sum_{i=t}^{t+n} \alpha(y^{(i)}-h_{\theta}(x^{(i)}))x_{j}^{(i)}$
+  ​	$\theta_{j} :=\theta_{j} +\sum_{i=t}^{t+n} \alpha(y^{(i)}-h_{\theta}(x^{(i)}))x_{j}^{(i)}$
 
-      ​	}
+  ​	}
 
-      }
+  }
