@@ -12,7 +12,7 @@
 
 ### 例子（由Living area 和 Bedrooms 预测房价）
 
-![屏幕快照 2017-12-24 下午4.07.50](/Users/mac/Desktop/屏幕快照 2017-12-24 下午4.07.50.png)
+![屏幕快照 2017-12-24 下午4.07.50](/Users/mac/Desktop/Github/null-zxm.git.io/_posts/md/屏幕快照 2017-12-24 下午4.07.50.png)
 
 * 下面对于每一个数据用相关符号表示：$x_{i}^{(j)}​$表示第$j​$个数据的第$i​$个特征$\theta _{i}​$表示为第$i​$个特征的参数所以$h(\theta)=\theta _{0}+\theta _{1}x_{1}+\theta _{2}x_{2}​$可以取$\theta=\begin{bmatrix}\theta_{0} \\\theta_{1} \\\theta_{2} \end{bmatrix}​$ $x=\begin{bmatrix}1\\ x_{1}\\ x_{2}\end{bmatrix}​$那么$h(\theta)=\beta^{T} x​$
 

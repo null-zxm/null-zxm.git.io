@@ -1,0 +1,21 @@
+---
+layout:     post
+title:      "Locally weighted linear regression And Logistic"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2017-23-25 12:00:00
+author:     "Null"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - 机器学习
+---
+
+> “Yeah It's on. ”
+
+## 
+
+![log1](/img/log/log1.png)
+
+![log2](/img/log/log2.png)
+
+![log3](/img/log/log3.png)
+
