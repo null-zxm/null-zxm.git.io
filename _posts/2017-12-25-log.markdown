@@ -2,7 +2,7 @@
 layout:     post
 title:      "Locally weighted linear regression And Logistic"
 subtitle:   " \"Hello World, Hello Blog\""
-date:       2017-23-25 12:00:00
+date:       2017-12-25 12:00:00
 author:     "Null"
 header-img: "img/post-bg-2015.jpg"
 tags:
