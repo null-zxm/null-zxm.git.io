@@ -1,10 +1,10 @@
 # Site settings
-title: Zhou Blog
+title: Z Blog
 SEOTitle: 周的博客 | Null Blog
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
+email: it__zxm@163.com
 description: "java后端、黑客与画家 | 机器学习 神经网络 | 这里是 @Null 的个人博客，分享你我趣闻。"
-keyword: "周希敏, Zhou , 机器学习, 数学, zhoupro, @Null, 周的博客, Zhou Blog, 博客, 个人网站, 互联网, Web, Java, 后端, 设计"
+keyword: "周希敏, Zhou , 机器学习, 数学,zxm__null , @Null, 周的博客, Zhou Blog, 博客, 个人网站, 互联网, Web, Java, 后端, 设计"
 url: "https://zhouximin.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
