@@ -32,7 +32,8 @@ tags:
 
     * ##### Filter的作用：每一个Filter对应一个笔画，好比如你画画时候画的一笔，那么过滤后相加得到最大的模块是和这个笔画最相似的模块，因此后面通过Maxpopling subsampling出来。那么多个Filter就可以找出对应相似度最大的相关像素点组成的新的features。
 
-    #### 代码：
+    * ##### 代码：
+
 
 ```
 import numpy as np
