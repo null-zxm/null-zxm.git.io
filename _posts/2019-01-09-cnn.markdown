@@ -1,0 +1,93 @@
+---
+layout:     post
+title:      "onvolutional Neual Network（CNN）"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2019-01-09 12:00:00
+author:     "Null"
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - 机器学习
+---
+
+> “Yeah It's on. ”
+
+# convolutional Neual Network（CNN）
+
+
+
+* #### 为什么CNN通常用在图片识别领域
+
+  * #####图片的一些模块比一整张图片更像，例如一个人站在不同的景点，整张图片并没有很大的相似度，但是这个人的脸部这个模块是非常相似的，那么可以判别出这个是同一个人，或同一个类别的生物。
+
+  * #####一个神经元不需要去看一整个图片，这样可以通过较少的参数的模块来判别
+
+  * #####subsampling 像素并不会改变这个图片，但是可以让这个图片变小
+
+* #### The whole CNN
+
+  #### ![cnn1](/img/CNN/cnn1.png)
+
+* #### 卷积层 Convolution and Max Pooling
+    * #####卷积层里面有n个Filter，假设这个图片原来是26*26*1的图片，Filter为3*3，stride为1,那么通过一次卷积层后output一个n*24*243维数组，这个Filter走一步会对应图片上面9个数字，将数字全部相加会得出一个数字，因此每一个Filter过滤出来一个24*24的矩阵,
+
+    * ##### Filter的作用：每一个Filter对应一个笔画，好比如你画画时候画的一笔，那么过滤后相加得到最大的模块是和这个笔画最相似的模块，因此后面通过Maxpopling subsampling出来。那么多个Filter就可以找出对应相似度最大的相关像素点组成的新的features。
+
+    ####代码：
+
+```
+import numpy as np
+from keras.models import Sequential
+from keras.layers.core import Dense,Dropout,Activation
+from keras.layers import Conv2D,MaxPooling2D,Flatten
+from keras.optimizers import SGD,Adam
+from keras.utils import np_utils
+from keras.datasets import mnist
+
+def load_data():
+    (x_train,y_train),(x_test,y_test)=mnist.load_data()
+    number= 10000
+    x_train=x_train[0:number]
+    y_train=y_train[0:number]
+    x_train=x_train.reshape(number,28,28,1)
+    x_test=x_test.reshape(x_test.shape[0],28,28,1)
+    x_train=x_train.astype('float32');
+    x_test = x_test.astype('float32');
+    y_train=np_utils.to_categorical(y_train,10)
+    y_test = np_utils.to_categorical(y_test, 10)
+    x_train=x_train
+    x_test=x_test
+    x_train=x_train/255
+    x_test=x_test/255# 归一化
+
+    return  (x_train,y_train),(x_test,y_test)
+
+(x_train,y_train),(x_test,y_test)=load_data()
+model = Sequential()
+#input 1*28*28
+model.add(Conv2D(25,3,input_shape = (28,28,1)))
+#convolutiion 后 25*26*26
+model.add(MaxPooling2D((2,2)))
+#MaxPooling 后 25*13*13
+model.add(Conv2D(50,3))
+#convolutiion 后 50*11*11
+model.add(MaxPooling2D((2,2)))
+#convolutiion 后 50*5*5
+model.add(Flatten())
+model.add(Dense(units=100,activation='relu'))
+# model.add(Dropout(0.5))加在每一个 hidden layers 后面
+model.add(Dense(units=10,activation='softmax'))
+#
+model.compile(loss='categorical_crossentropy',optimizer='adam',metrics=['accuracy'])
+#SGD(lr=0.1)
+model.fit(x_train,y_train,batch_size=100,epochs=20)
+# batch_size 如果这个是1  就是随机梯度下降 epochs 循环学习次数
+result = model.evaluate(x_test,y_test)
+result2 = model.evaluate(x_train,y_train)
+
+print('\nTrant Acc',result2[1])
+
+print('\nTest Acc',result[1])
+```
+
+
+
