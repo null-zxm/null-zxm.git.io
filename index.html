@@ -5,7 +5,8 @@
 		<title>sssss</title>
 	</head>
 	<body>
-		hello22
+        <audio style="display:none; height: 0" id="bg-music" preload="auto" src="music/bj.mp3" loop="loop"></audio>
+		可爱的小粉，数学题写了多少？
 	<script>
     function audioAutoPlay(id){
         var audio = document.getElementById(id),
@@ -22,7 +23,7 @@
         }, false);
         document.addEventListener("touchstart",play, false);
     }
-    audioAutoPlay('Jaudio');
+    audioAutoPlay('bg-music');
     </script>
 	</body>
 </html>
