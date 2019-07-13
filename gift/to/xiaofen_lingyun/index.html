@@ -14,6 +14,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<audio src="music/bj.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -369,6 +370,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+    		function audioAutoPlay(id){
+        		var audio = document.getElementById(id),
+            		play = function(){
+               		 audio.play();
+                		document.removeEventListener("touchstart",play, false);
+           		 };
+        		audio.play();
+       		 document.addEventListener("WeixinJSBridgeReady", function () {
+     		       play();
+        		}, false);
+        		document.addEventListener('YixinJSBridgeReady', function() {
+            		play();
+        		}, false);
+        		document.addEventListener("touchstart",play, false);
+    		}
+    		audioAutoPlay('Jaudio');
+   		 </script>
 
 	</body>
 </html>
